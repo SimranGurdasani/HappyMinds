@@ -1,0 +1,140 @@
+/* Footer Section */
+.footer {
+  background: #ff8c8c; /* Dark background */
+  color: white;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Footer Branding */
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Brand color */
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #2c3e50; /* Light gray */
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  color: #ff8c8c; /* Brand color */
+}
+
+/* Footer Links */
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #2c3e50; /* Light gray */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #fff; /* Brand color */
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #2c3e50; /* Light gray */
+  margin-bottom: 15px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.newsletter-btn {
+  background: white; /* Brand color */
+  color: #ff8c8c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.newsletter-btn:hover {
+  background: #2c3e50; /* Darker shade for hover */
+  color: #fff;
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #34495e; /* Darker border */
+}
+
+.copyright {
+  font-size: 14px;
+  color: #2c3e50; /* Light gray */
+}

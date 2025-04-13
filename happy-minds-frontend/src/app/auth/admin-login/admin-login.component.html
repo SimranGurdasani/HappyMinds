@@ -1,0 +1,33 @@
+<!-- Language Selection Dropdown -->
+<select (change)="changeLanguage($event)">
+  <option value="en">English</option>
+  <option value="hi">हिन्दी</option>
+</select>
+
+<div class="auth-container">
+  <h2>{{ 'ADMIN_LOGIN' | translate }}</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="loginAdmin()">
+
+    <!-- Email Field -->
+    <div class="input-container">
+      <input formControlName="email" type="email" [placeholder]="'THERAPIST_EMAIL' | translate" required>
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error-message">
+        {{ 'EMAIL_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Password Field -->
+    <div class="input-container">
+      <input formControlName="password" type="password" [placeholder]="'PASSWORD' | translate" required>
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
+        {{ 'PASSWORD_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Login Button -->
+    <button type="submit" class="btn">{{ 'LOGIN' | translate }}</button>
+  </form>
+
+  <p><a href="#">{{ 'FORGOT_PASSWORD' | translate }}</a></p>
+  <p>{{ 'DONT_HAVE_ACCOUNT' | translate }} <a (click)="toggleForms()">{{ 'SIGNUP' | translate }}</a></p>
+</div>

@@ -1,0 +1,60 @@
+<!-- Language Selection Dropdown -->
+<select (change)="changeLanguage($event)">
+  <option value="en">English</option>
+  <option value="hi">हिन्दी</option>
+</select>
+
+<div class="auth-container">
+  <h2>{{ 'ADMIN_SIGNUP' | translate }}</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="createAdmin()">
+
+    <!-- Therapist Name -->
+    <div class="input-container">
+      <input formControlName="therapistName" type="text" [placeholder]="'THERAPIST_NAME' | translate" required>
+      <div *ngIf="signupForm.get('therapistName')?.invalid && signupForm.get('therapistName')?.touched" class="error-message">
+        {{ 'THERAPIST_NAME_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- City -->
+    <div class="input-container">
+      <input formControlName="city" type="text" [placeholder]="'CITY' | translate" required>
+      <div *ngIf="signupForm.get('city')?.invalid && signupForm.get('city')?.touched" class="error-message">
+        {{ 'CITY_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Speciality -->
+    <div class="input-container">
+      <input formControlName="speciality" type="text" [placeholder]="'SPECIALITY' | translate" required>
+      <div *ngIf="signupForm.get('speciality')?.invalid && signupForm.get('speciality')?.touched" class="error-message">
+        {{ 'SPECIALITY_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Gender -->
+    <div class="input-container">
+      <select formControlName="gender" required>
+        <option value="" disabled selected>{{ 'SELECT_GENDER' | translate }}</option>
+        <option value="Male">{{ 'GENDER_MALE' | translate }}</option>
+        <option value="Female">{{ 'GENDER_FEMALE' | translate }}</option>
+        <option value="Other">{{ 'GENDER_OTHER' | translate }}</option>
+      </select>
+      <div *ngIf="signupForm.get('gender')?.invalid && signupForm.get('gender')?.touched" class="error-message">
+        {{ 'GENDER_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Years of Experience -->
+    <div class="input-container">
+      <input formControlName="years_experience" type="number" [placeholder]="'YEARS_EXPERIENCE' | translate" required>
+      <div *ngIf="signupForm.get('years_experience')?.invalid && signupForm.get('years_experience')?.touched" class="error-message">
+        {{ 'YEARS_EXPERIENCE_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Sign Up Button -->
+    <button type="submit" class="btn" [disabled]="!signupForm.valid">{{ 'SIGNUP' | translate }}</button>
+  </form>
+  <p>{{ 'ALREADY_HAVE_ACCOUNT' | translate }} <a routerLink="/admin-login">{{ 'LOGIN' | translate }}</a></p>
+</div>

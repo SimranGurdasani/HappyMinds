@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'books'" (click)="activeTab = 'books'">📚 Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'songs'" (click)="activeTab = 'songs'">🎵 Songs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'videos'" (click)="activeTab = 'videos'">🎬 Videos</a>
+      </li>
+    </ul>
+  
+    <div class="mt-3">
+      <app-books *ngIf="activeTab === 'books'"></app-books>
+      <app-songs *ngIf="activeTab === 'songs'"></app-songs>
+      <app-videos *ngIf="activeTab === 'videos'"></app-videos>
+    </div>
+  </div>
+  

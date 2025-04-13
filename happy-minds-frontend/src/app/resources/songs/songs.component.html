@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="text-center mt-3">{{ title }}</h2>
+  <ul class="list-group mt-3">
+    <li class="list-group-item d-flex align-items-center justify-content-between" *ngFor="let song of songs">
+      <div class="d-flex align-items-center">
+        <img [src]="song.image" class="artist-img me-3" alt="{{ song.artist }}'s Image">
+        <span>{{ song.title }}</span>
+      </div>
+      <a [href]="song.youtubeLink" target="_blank" class="btn btn-primary play-button">
+        Play
+      </a>
+    </li>
+  </ul>
+</div>

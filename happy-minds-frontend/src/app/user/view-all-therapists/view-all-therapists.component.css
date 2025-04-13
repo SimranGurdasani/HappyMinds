@@ -1,0 +1,475 @@
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1050;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 1;
+}
+
+
+.page-wrapper {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .breadcrumb {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .breadcrumb span:first-child {
+    color: #333;
+  }
+  
+  .page-title {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .content-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+  }
+  
+  /* Filters Panel Styles */
+  .filters-panel {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .filters-title {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    display: block;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .clear-filters-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #0089b9;
+    color: #0089b9;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Doctors List Styles */
+  .doctor-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    
+  }
+  
+  .doctor-profile {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+  }
+  
+  .doctor-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .doctor-name {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  /* Offcanvas Styles */
+ 
+  
+  .offcanvas.show {
+    transform: translateX(0);
+  }
+
+.offcanvas-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.offcanvas-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.offcanvas-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.offcanvas-close-btn:hover {
+  color: #333;
+}
+
+.offcanvas-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Improve spacing in modal content */
+.section-heading {
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.doctor-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.doctor-location {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.proceed-btn {
+  background: #0089b9;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+  
+  .experience-tag {
+    display: inline-block;
+    background: #e6f3ff;
+    color: #0089b9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .qualification {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .language, .hospital {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .appointment-section {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+  }
+  
+  .timings {
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .days {
+    color: #0089b9;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+  }
+  
+  .time {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .book-btn {
+    background: #f4511e;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .book-btn:hover {
+    background: #e64a19;
+  }
+
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  } 
+  .dates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .dates-container,
+.slots-container {
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.date-pill,
+.time-slot-btn {
+  margin: 0;
+}
+
+/* Add these styles to your existing CSS */
+.offcanvas {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+/* Ensure backdrop positioning */
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+}
+  
+  .date-pill {
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .date-pill:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+  }
+  
+  .date-pill.selected {
+    background-color: #3182ce;
+    color: white;
+    border-color: #3182ce;
+    transform: scale(1.02);
+  }
+
+
+.date-pill:hover {
+  background-color: #e9ecef;
+}
+
+.date-pill.selected {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.time-slot-btn {
+  padding: 8px 16px;
+  margin: 4px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot-btn:hover {
+  background-color: #e9ecef;
+}
+
+.time-slot-btn.selected {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.date-pill {
+  padding: 8px 16px;
+  margin: 4px;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.date-pill:hover {
+  background-color: #e9ecef;
+}
+.date-pill.selected {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+.time-slot-btn {
+  padding: 8px 16px;
+  margin: 4px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.time-slot-btn:hover {
+  background-color: #e9ecef;
+}
+.time-slot-btn.selected {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+.slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.dates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}

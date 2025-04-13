@@ -1,0 +1,22 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-brand">
+    <img src="../../../assets/logo.png" alt="HappyMinds Logo" class="logo" />
+    <span class="brand-name">HappyMinds</span>
+  </div>
+  <ul class="navbar-links">
+    <li><a class="nav-link">Home</a></li>
+    <ng-container *ngIf="!isAdmin; else adminLinks">
+      <li><a routerLink="/view-all-therapists" class="nav-link">Book a Session</a></li>
+      <li><a routerLink="/my-bookings" class="nav-link">My Bookings</a></li>
+    </ng-container>
+    <ng-template #adminLinks>
+      <li><a routerLink="/my-appointments" class="nav-link">View Appointments</a></li>
+      <li><a routerLink="/generate-slots" class="nav-link">Generate Slots</a></li>
+    </ng-template>
+  </ul>
+  <div class="navbar-actions">
+    <!-- <a href="#about" class="btn nav-btn">Login</a>
+    <a href="#about" class="btn nav-btn">Sign Up</a> -->
+  </div>
+</nav>

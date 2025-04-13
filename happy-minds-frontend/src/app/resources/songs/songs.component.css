@@ -1,0 +1,30 @@
+.artist-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .artist-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .play-button {
+    background-color: rgb(22, 93, 89) !important;  /* Custom button color */
+    border: none;                         /* Remove default border */
+    color: white;                           /* Text color */
+    font-weight: bold;
+    padding: 5px 15px;                     /* Adjust padding */
+    border-radius: 5px;                    /* Rounded corners */
+    transition: 0.3s;                       /* Smooth hover effect */
+  }
+  
+  .play-button:hover {
+    background-color: #B8E6E3 !important;  /* Slightly darker on hover */
+    color: black;
+  }
+  
+  

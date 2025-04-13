@@ -1,0 +1,264 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.form-section, .slots-section {
+  flex: 1;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.error-message {
+  color: #dc3545;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  background-color: #f8d7da;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.slots-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.slot-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.slot-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.generate-btn {
+  width: 100%;
+  background: #007bff;
+  color: white;
+}
+
+.select-btn {
+  background: #28a745;
+  color: white;
+}
+
+.select-btn.selected {
+  background: #218838;
+}
+
+.customize-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  padding: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.slot-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slot-time {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.slot-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.select-btn, .customize-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.select-btn.selected {
+  background-color: #28a745;
+}
+
+.customize-btn {
+  background-color: #6c757d;
+  color: white;
+}
+.slots-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.date-group {
+  margin-bottom: 2rem;
+}
+
+.date-header {
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  color: #495057;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-left: 4px solid #007bff;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.slot-card {
+  border: 1px solid #dee2e6;
+  padding: 1rem;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.slot-card.selected {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+.slot-time {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #212529;
+  font-weight: 500;
+}
+
+.slot-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.select-btn, .customize-btn {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.select-btn.selected {
+  background-color: #28a745;
+}
+
+.customize-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.slot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.error-message {
+  color: #dc3545;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  background-color: #f8d7da;
+}

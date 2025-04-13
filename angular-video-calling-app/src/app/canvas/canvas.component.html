@@ -1,0 +1,65 @@
+<!-- canvas.component.html -->
+<div class="activity-container">
+    <button (click)="openModal()">
+      <i class="fas fa-palette"></i>
+      Complete Activity
+    </button>
+  </div>
+  
+  <div class="modal-overlay" *ngIf="isModalOpen">
+    <div class="modal-content">
+      <span class="close-btn" (click)="closeModal()">&times;</span>
+      <h2>How are you feeling today? 🎨</h2>
+  
+      <div class="canvas-container">
+        <div class="canvas-tools">
+          <button (click)="setTool('pencil')" [class.active]="currentTool === 'pencil'">
+            <i class="fas fa-pencil-alt"></i>
+            <span class="tool-label">Pencil</span>
+          </button>
+          <button (click)="setTool('line')" [class.active]="currentTool === 'line'">
+            <i class="fas fa-slash"></i>
+            <span class="tool-label">Line</span>
+          </button>
+          <button (click)="setTool('rectangle')" [class.active]="currentTool === 'rectangle'">
+            <i class="far fa-square"></i>
+            <span class="tool-label">Rectangle</span>
+          </button>
+          <button (click)="setTool('circle')" [class.active]="currentTool === 'circle'">
+            <i class="far fa-circle"></i>
+            <span class="tool-label">Circle</span>
+          </button>
+  
+          <input type="color" (change)="setStrokeColor($event)" title="Select Color">
+          
+          <div class="tool-group">
+            <input 
+              type="range" 
+              min="1" 
+              max="20" 
+              [value]="lineWidth"
+              (input)="setLineWidth($event)"
+              title="Line Width"
+            >
+            <span>{{ lineWidth }}px</span>
+          </div>
+  
+          <button (click)="saveCanvasAsImage()">
+            <i class="fas fa-save"></i>
+            <span class="tool-label">Save</span>
+          </button>
+          <button (click)="refresh()">
+            <i class="fas fa-trash"></i>
+            <span class="tool-label">Clear</span>
+          </button>
+        </div>
+  
+        <canvas 
+          #myCanvas 
+          width="600" 
+          height="400" 
+          class="drawing-canvas">
+        </canvas>
+      </div>
+    </div>
+  </div>

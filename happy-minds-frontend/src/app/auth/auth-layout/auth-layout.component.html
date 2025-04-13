@@ -1,0 +1,27 @@
+<div class="main-container" [ngStyle]="{ 'background-color': backgroundColor }">
+    <!-- Left Side: Login / Sign Up  -->
+    <div class="form-container">
+      <!-- Role Selection Buttons -->
+      <div class="role-selection">
+        <button class="role-button" (click)="selectRole('user')" [class.active]="selectedRole === 'user'">User</button>
+        <button class="role-button" (click)="selectRole('admin')" [class.active]="selectedRole === 'admin'">Admin</button>
+      </div>
+  
+      <!-- User Login/Signup -->
+      <div *ngIf="selectedRole === 'user'">
+        <app-login *ngIf="isLogin" [toggleForm]="toggleForm.bind(this)"></app-login>
+        <app-signup *ngIf="!isLogin" [toggleForm]="toggleForm.bind(this)"></app-signup>
+      </div>
+  
+      <!-- Admin Login/Signup -->
+      <div *ngIf="selectedRole === 'admin'">
+        <app-admin-login *ngIf="isAdminLogin" [toggleForms]="toggleForms.bind(this)"></app-admin-login>
+        <app-admin-signup *ngIf="!isAdminLogin" [toggleForms]="toggleForms.bind(this)"></app-admin-signup>
+      </div>
+    </div>
+  
+    <!-- Right Side: Facial Expression Recognition -->
+    <div class="webcam-container">
+      <app-webcam (backgroundColorChange)="onBackgroundColorChange($event)"></app-webcam>
+    </div>
+  </div>

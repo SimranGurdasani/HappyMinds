@@ -1,0 +1,10 @@
+<div class="webcam-container">
+    <h1>Facial Expression Recognition</h1>
+    <p><strong>Detected Emotion:</strong> {{ emotion }}</p>
+
+    <!-- Video Element for the webcam feed -->
+    <video id="video" autoplay muted></video>
+
+    <!-- Canvas Element for drawing face detections and expressions -->
+    <canvas id="canvas" width="640" height="480" style="position: absolute;"></canvas>
+</div>

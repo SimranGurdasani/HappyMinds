@@ -1,0 +1,41 @@
+<div class="appointments-container">
+  <h2>My Appointments</h2>
+
+  <div class="appointment-list" *ngIf="appointments.length > 0">
+    <div class="appointment-card" *ngFor="let appointment of appointments">
+      <div class="appointment-header">
+        <h3>{{ appointment.userName }}</h3>
+        <span class="status" [class.taken]="appointment.activityCompleted">
+          {{ appointment.activityCompleted ? 'Completed' : 'Pending' }}
+        </span>
+      </div>
+
+      <div class="appointment-details">
+        <div class="date-time">
+          {{ formatDate(appointment.dateTime) }}
+        </div>
+
+        <div class="action-buttons">
+          <button 
+            class="btn start-session-btn" 
+            (click)="startSession(appointment.id)"
+            [disabled]="appointment.activityCompleted">
+            Start Session
+          </button>
+          <button 
+  class="btn generate-key-btn" 
+  (click)="generateKey(appointment.id)"
+  [disabled]="appointment.activityCompleted">
+  Generate Key
+</button>
+<h4 *ngIf="appointment.sessionKey">{{ appointment.sessionKey }}</h4>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-appointments" *ngIf="appointments.length === 0">
+    <p>No appointments found.</p>
+  </div>
+</div>

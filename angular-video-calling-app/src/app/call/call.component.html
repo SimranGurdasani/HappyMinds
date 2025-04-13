@@ -1,0 +1,27 @@
+<section>
+  <div class="participants">
+    <ng-container *ngFor="let participant of participants(); trackBy: trackBySessionId">
+      <app-participant [participant]="participant"></app-participant>
+    </ng-container>
+  </div>
+
+  <app-canvas></app-canvas>
+
+  <!-- call.component.html -->
+<div *ngIf="isHost" class="prescription-button-container">
+  <button class="btn btn-primary" (click)="togglePrescription()">
+    Create Prescription
+  </button>
+</div>
+
+<app-prescription 
+  *ngIf="showPrescription" 
+  (sidebarClosed)="showPrescription = false"
+></app-prescription>
+
+  <div class="call-controls">
+    <button (click)="toggleMicrophone()">Mic</button>
+    <button (click)="toggleCamera()">Camera</button>
+    <button class="leave-button" (click)="leaveCall()">Leave</button>
+  </div>
+</section>
