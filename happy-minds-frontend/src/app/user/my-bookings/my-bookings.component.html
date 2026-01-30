@@ -1,0 +1,50 @@
+<div class="bookings-container">
+  <div class="language-selector">
+    <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'">English</button>
+    <button (click)="switchLanguage('hi')" [class.active]="currentLang === 'hi'">हिंदी</button>
+  </div>
+
+  <h2>{{ 'MY_BOOKINGS' | translate }}</h2>
+  
+  <ng-container *ngIf="bookings.length > 0; else noBookings">
+    <div class="booking-list">
+      <div *ngFor="let booking of bookings" class="booking-card">
+        <div class="booking-header">
+          <h3>{{ booking.therapistName }}</h3>
+          <span class="status" [class.taken]="booking.slotTaken">
+            {{ booking.slotTaken ? ('CONFIRMED' | translate) : ('AVAILABLE' | translate) }}
+          </span>
+        </div>
+
+        <div class="booking-details">
+          <p class="date-time">
+            {{ (booking.dateTime) }}
+          </p>
+          
+          <div class="action-buttons">
+            <button 
+              class="btn activity-btn"
+              (click)="completeActivity(booking.id)"
+              [disabled]="booking.activityCompleted"
+              *ngIf="!booking.activityCompleted">
+              <i class="fas fa-check"></i> {{ 'COMPLETE_ACTIVITY' | translate }}
+            </button>
+
+            <button 
+              class="btn join-btn"
+              (click)="joinSession(booking.id)"
+              [disabled]="!booking.slotTaken">
+              <i class="fas fa-video"></i> {{ 'JOIN_SESSION' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noBookings>
+    <div class="no-bookings">
+      <p>{{ 'NO_BOOKINGS' | translate }}</p>
+    </div>
+  </ng-template>
+</div>

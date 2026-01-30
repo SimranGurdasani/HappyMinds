@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="header">
+      <h1>My Collected Data</h1>
+      <div class="user-info">
+        <span>Helper ID: {{currentHelper?.a_id}} ({{currentHelper?.a_name}})</span>
+        <button class="btn btn-sm btn-outline-danger" (click)="logout()">Logout</button>
+      </div>
+    </div>
+    
+    <div class="actions">
+      <button class="btn btn-primary" (click)="openModal()">+ New Entry</button>
+    </div>
+    
+    <div class="data-table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Client Name</th>
+            <th>Address</th>
+            <th>Region</th>
+            <th>Daily Routine</th>
+            <th>Social Connections</th>
+            <th>Home Environment</th>
+            <th>Future Outlook</th>
+            <th>Self Care</th>
+            <th>Stress Management</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of collectedData">
+            <td>{{data.d_id}}</td>
+            <td>{{data.client_name}}</td>
+            <td>{{data.client_address}}</td>
+            <td>{{data.client_region}}</td>
+            <td>{{data.q1_answer}}/5</td>
+            <td>{{data.q2_answer}}/5</td>
+            <td>{{data.q3_answer}}/5</td>
+            <td>{{data.q4_answer}}/5</td>
+            <td>{{data.q5_answer}}/5</td>
+            <td>{{data.q6_answer}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Modal outside main container -->
+  <app-data-entry-modal 
+    *ngIf="showModal"
+    [showModal]="showModal" 
+    (close)="closeModal()"
+    (dataAdded)="onDataAdded()">
+  </app-data-entry-modal>

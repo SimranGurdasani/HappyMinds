@@ -1,0 +1,156 @@
+<div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal-dialog show">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Add New Client Data</h2>
+          <button type="button" class="btn-close" (click)="onClose()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="clientForm" [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+            <!-- Keep all your existing form fields exactly as they were -->
+            <div class="form-group">
+              <label for="client_name">Client Name</label>
+              <input type="text" formControlName="client_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['client_name'].errors }" />
+              <div *ngIf="submitted && f['client_name'].errors" class="invalid-feedback">
+                <div *ngIf="f['client_name'].errors['required']">Client name is required</div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="client_address">Client Address</label>
+                <input type="text" formControlName="client_address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['client_address'].errors }" />
+                <div *ngIf="submitted && f['client_address'].errors" class="invalid-feedback">
+                  <div *ngIf="f['client_address'].errors['required']">Client address is required</div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="client_region">Client Region</label>
+                <input type="text" formControlName="client_region" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['client_region'].errors }" />
+                <div *ngIf="submitted && f['client_region'].errors" class="invalid-feedback">
+                  <div *ngIf="f['client_region'].errors['required']">Client region is required</div>
+                </div>
+              </div>
+
+              <h4>Assessment Questions</h4>
+          
+          <div class="form-group">
+            <label>{{ questions.q1 }}</label>
+            <div class="rating-select">
+              <select formControlName="q1_answer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['q1_answer'].errors }">
+                <option value="">Select...</option>
+                <option value="1">1 - Very disorganized</option>
+                <option value="2">2 - Somewhat chaotic</option>
+                <option value="3">3 - Neutral</option>
+                <option value="4">4 - Fairly structured</option>
+                <option value="5">5 - Well structured</option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['q1_answer'].errors" class="invalid-feedback">
+              <div *ngIf="f['q1_answer'].errors['required']">Please select an answer</div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>{{ questions.q2 }}</label>
+            <div class="rating-select">
+              <select formControlName="q2_answer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['q2_answer'].errors }">
+                <option value="">Select...</option>
+                <option value="1">1 - Almost never</option>
+                <option value="2">2 - Rarely</option>
+                <option value="3">3 - Sometimes</option>
+                <option value="4">4 - Often</option>
+                <option value="5">5 - Very frequently</option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['q2_answer'].errors" class="invalid-feedback">
+              <div *ngIf="f['q2_answer'].errors['required']">Please select an answer</div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>{{ questions.q3 }}</label>
+            <div class="rating-select">
+              <select formControlName="q3_answer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['q3_answer'].errors }">
+                <option value="">Select...</option>
+                <option value="1">1 - Not at all important</option>
+                <option value="2">2 - Slightly important</option>
+                <option value="3">3 - Moderately important</option>
+                <option value="4">4 - Very important</option>
+                <option value="5">5 - Extremely important</option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['q3_answer'].errors" class="invalid-feedback">
+              <div *ngIf="f['q3_answer'].errors['required']">Please select an answer</div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>{{ questions.q4 }}</label>
+            <div class="rating-select">
+              <select formControlName="q4_answer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['q4_answer'].errors }">
+                <option value="">Select...</option>
+                <option value="1">1 - Very pessimistic</option>
+                <option value="2">2 - Somewhat concerned</option>
+                <option value="3">3 - Neutral</option>
+                <option value="4">4 - Cautiously optimistic</option>
+                <option value="5">5 - Very positive</option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['q4_answer'].errors" class="invalid-feedback">
+              <div *ngIf="f['q4_answer'].errors['required']">Please select an answer</div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>{{ questions.q5 }}</label>
+            <div class="rating-select">
+              <select formControlName="q5_answer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['q5_answer'].errors }">
+                <option value="">Select...</option>
+                <option value="1">1 - Cannot remember</option>
+                <option value="2">2 - Months ago</option>
+                <option value="3">3 - Weeks ago</option>
+                <option value="4">4 - Days ago</option>
+                <option value="5">5 - Today/Yesterday</option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['q5_answer'].errors" class="invalid-feedback">
+              <div *ngIf="f['q5_answer'].errors['required']">Please select an answer</div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>{{ questions.q6 }}</label>
+            <div class="radio-group">
+              <select formControlName="q6_answer" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['q6_answer'].errors }">
+                <option value="">Select...</option>
+                <option *ngFor="let option of stressOptions" [value]="option.value">{{ option.label }}</option>
+              </select>
+            </div>
+            <div *ngIf="submitted && f['q6_answer'].errors" class="invalid-feedback">
+              <div *ngIf="f['q6_answer'].errors['required']">Please select an answer</div>
+            </div>
+          </div>
+          
+          <!-- <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary submit-btn">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Save Data
+            </button>
+          </div> -->
+            <!-- Rest of your form fields remain the same -->
+  
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="onClose()">Close</button>
+          <button type="submit" class="btn btn-primary" [disabled]="loading" form="clientForm">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save Data
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

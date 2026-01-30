@@ -1,0 +1,207 @@
+/* Global Styles */
+:host {
+    display: block;
+    height: 100vh; /* Use the full viewport height */
+    width: 100vw;  /* Use the full viewport width */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #d4f1f9, #eaf7fc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent scrolling */
+    position: absolute; /* Ensures the background covers the full screen */
+    top: 0;
+    left: 0;
+  }
+  
+  /* Main Container */
+  .main-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow for wrapping on smaller screens */
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Keep it at 80% width of the screen */
+    max-width: 1100px; /* Max width for larger screens */
+    gap: 40px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+  
+  /* Left Side: Form Container */
+  .form-container {
+    flex: 1;
+    padding: 30px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align content in the center */
+    text-align: center;
+  }
+  
+  /* Right Side: Webcam Container */
+  .webcam-container {
+    flex: 1;
+    padding: 30px;
+    border-radius: 15px;
+    background: #f0fbff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Role Selection Buttons */
+  .role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .role-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #00796b;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .role-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+  }
+  
+  .role-button.active {
+    background-color: #004d40;
+  }
+  
+  /* Admin Login Form */
+  .admin-login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004d40;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #004d40;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+  }
+  
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-password a {
+    color: #00796b;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .signup-link a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Webcam Styles */
+  video {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    border: 2px solid #00796b;
+  }
+  
+  /* Emotion Detection Text */
+  .emotion-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #004d40;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+      width: 90%; /* Make sure it's still centered */
+      gap: 20px; /* Reduce gap for smaller screens */
+      padding: 20px;
+    }
+  
+    .form-container, .webcam-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .role-selection {
+      flex-direction: column; /* Stack role buttons on small screens */
+      gap: 15px;
+    }
+  }
+  

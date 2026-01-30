@@ -1,0 +1,55 @@
+<select (change)="changeLanguage($event)">
+  <option value="en">English</option>
+  <option value="hi">Hindi</option>
+</select>
+
+<div class="auth-container">
+  <h2>{{ 'SIGNUP' | translate }}</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
+    <!-- Username -->
+    <div class="input-container">
+      <input formControlName="username" type="text" [placeholder]="'USERNAME' | translate" required>
+      <div *ngIf="signupForm.get('username')?.invalid && (signupForm.get('username')?.touched || signupForm.get('username')?.dirty)" class="error-message">
+        {{ 'USERNAME_REQUIRED' | translate }}
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="input-container">
+      <input formControlName="email" type="email" [placeholder]="'EMAIL' | translate" required>
+      <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.touched || signupForm.get('email')?.dirty)" class="error-message">
+        {{ 'EMAIL_INVALID' | translate }}
+      </div>
+    </div>
+
+    <!-- Phone Number -->
+    <div class="input-container">
+      <input formControlName="phone_number" type="text" [placeholder]="'PHONE_NUMBER' | translate" required>
+      <div *ngIf="signupForm.get('phone_number')?.invalid && (signupForm.get('phone_number')?.touched || signupForm.get('phone_number')?.dirty)" class="error-message">
+        {{ 'PHONE_INVALID' | translate }}
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="input-container">
+      <input formControlName="password" type="password" [placeholder]="'PASSWORD' | translate" required>
+      <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.touched || signupForm.get('password')?.dirty)" class="error-message">
+        {{ 'PASSWORD_MIN_LENGTH' | translate }}
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="input-container">
+      <input formControlName="confirm_password1" type="password" [placeholder]="'CONFIRM_PASSWORD' | translate" required>
+      <div *ngIf="signupForm.get('confirm_password1')?.hasError('passwordMismatch') && (signupForm.get('confirm_password1')?.touched || signupForm.get('confirm_password1')?.dirty)" class="error-message">
+        {{ 'PASSWORD_MISMATCH' | translate }}
+      </div>
+    </div>
+
+    <!-- Hidden Registration Date -->
+
+    <!-- Sign Up Button -->
+    <button type="submit" class="btn" [disabled]="!signupForm.valid">{{ 'SIGNUP' | translate }}</button>
+  </form>
+  <p>{{ 'ALREADY_HAVE_ACCOUNT' | translate }} <a routerLink="/login">{{ 'LOGIN' | translate }}</a></p>
+</div>

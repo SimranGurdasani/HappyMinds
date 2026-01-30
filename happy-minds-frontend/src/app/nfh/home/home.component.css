@@ -1,0 +1,454 @@
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Black Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* Quote Content */
+.quote-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 3;
+  width: 80%;
+  max-width: 800px;
+}
+
+.quote-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.quote-author {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  display: flex;
+  height: 83px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #2c3e50;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 30px;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+  z-index: 4;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Why Mental Health is Important Section */
+.mental-health {
+  padding: 80px 20px;
+  background: #f9f9f9; /* Light background */
+  text-align: center;
+}
+
+.mental-health-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mental-health-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.mental-health-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.mental-health-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mental-health-image {
+  flex: 1;
+  max-width: 45%;
+}
+
+.mental-health-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mental-health-image img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.mental-health-content {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
+}
+
+.mental-health-title {
+  font-size: 1.8rem;
+  color: #2c3e50; /* Dark text */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.mental-health-description {
+  font-size: 1.1rem;
+  color: #34495e; /* Slightly lighter text */
+  line-height: 1.6;
+}
+
+.mental-health-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.mental-health-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Books Section */
+.books {
+  padding: 80px 20px;
+  background: #ff8c8c;
+  text-align: center;
+}
+
+.section-title-odd {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.section-title-even {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+
+.books-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Book Card */
+.book-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 23%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Book Image */
+.book-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Book Content */
+.book-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.book-description {
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  /* background: #fff; White background for contrast */
+  text-align: center;
+  
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Service Card */
+.service-card {
+  background: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 2.5rem;
+  color: #ff8c8c; /* Brand color */
+  margin-bottom: 20px;
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark text for contrast */
+  margin-bottom: 15px;
+}
+
+/* Service Description */
+.service-description {
+  font-size: 1rem;
+  color: #34495e; /* Slightly lighter dark text */
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 20px;
+  background: #ff8c8c; /* Light background for contrast */
+  text-align: center;
+}
+
+.testimonials-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  display: none;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-card.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-content {
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-size: 1.1rem;
+  color: #ff8c8c; /* Brand color */
+  font-weight: bold;
+}
+
+/* Testimonial Navigation Dots */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.testimonial-dots span {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.testimonial-dots span.active {
+  background: #fff; /* Brand color */
+}
+
+.testimonial-dots span:hover {
+  background: #ff4f4f; /* Hover color */
+}
+
+/* FAQ Section */
+.faq {
+  padding: 80px 20px;
+  background: #fff; /* Light background for contrast */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #fff; /* Dark text for contrast */
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FAQ Item */
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Question */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.faq-question h3 {
+  font-size: 1.25rem;
+  color: #2c3e50; /* Dark text for contrast */
+  margin: 0;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #ff8c8c; /* Brand color */
+  font-weight: bold;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.faq-answer.active {
+  max-height: 200px; /* Adjust based on content */
+  padding: 20px;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  color: #34495e; /* Slightly lighter dark text */
+  line-height: 1.6;
+  margin: 0;
+}

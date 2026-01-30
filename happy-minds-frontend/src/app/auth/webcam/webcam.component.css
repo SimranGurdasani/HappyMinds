@@ -1,0 +1,12 @@
+video {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 480px; /* Increased size */
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    max-width: 480px; /* Match the video size */
+    height: auto;
+}

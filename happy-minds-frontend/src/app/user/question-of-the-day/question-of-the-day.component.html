@@ -1,0 +1,30 @@
+<div class="question-container">
+    <h2>{{ question }}</h2>
+  
+    <!-- Text Area for User Response -->
+     <form action=""  [formGroup]="questionResponseForm">
+    <div class="d-flex">
+        <label for="userResponse">Enter your response below:</label>
+    <textarea
+      id="userResponse"
+      formControlName = "response"
+      placeholder="Type your answer here..."
+      rows="5"
+      cols="50"
+    ></textarea>
+    </div>
+    </form>
+  
+    <!-- Formatting Tools as UL and LI -->
+    <h3>Formatting Tools:</h3>
+    <ul class="formatting-tools">
+      <li (click)="formatText('bold')"><strong>Bold</strong></li>
+      <li (click)="formatText('italic')"><em>Italic</em></li>
+      <li (click)="formatText('underline')"><u>Underline</u></li>
+      <li (click)="formatText('code')"><code>Code</code></li>
+      <li (click)="formatText('link')">Insert Link</li>
+    </ul>
+  
+    <!-- Submit Button -->
+    <button (click)="onSubmit()">Submit Your Answer</button>
+  </div>

@@ -1,0 +1,287 @@
+<!-- Hero Section with Carousel -->
+<section id="home" class="hero">
+    <div class="carousel-container">
+      <!-- Static Slide 1 -->
+      <div class="carousel-slide active">
+        <!-- 'happy-minds/src/assets/images/quote1.jpg -->
+       
+        <div class="background-image" style="background-image: url('../../../assets/images/quote1.jpg');"></div>
+        <div class="overlay"></div>
+        <div class="quote-content">
+          <p class="quote-text">Your mental health is a priority. Your happiness is essential. Your self-care is a necessity.</p>
+          <p class="quote-author">- Harsh Ahuja</p>
+        </div>
+      </div>
+      <!-- Static Slide 2 -->
+      <div class="carousel-slide">
+        <div class="background-image" style="background-image: url('../../../assets/images/quote2.jpg');"></div>
+        <div class="overlay"></div>
+        <div class="quote-content">
+          <p class="quote-text">You don’t have to be positive all the time. It’s perfectly okay to feel sad, angry, annoyed, frustrated, scared, or anxious. Having feelings doesn’t make you a negative person. It makes you human.</p>
+          <p class="quote-author">- Simran Gurdasani</p>
+        </div>
+      </div>
+      <!-- Static Slide 3 -->
+      <div class="carousel-slide">
+        <div class="background-image" style="background-image: url('../../../assets/images/quote1.jpg');"></div>
+        <div class="overlay"></div>
+        <div class="quote-content">
+          <p class="quote-text">It’s okay to not be okay. Just don’t give up. Allow yourself to feel, then pick yourself up and keep going.</p>
+          <p class="quote-author">- Rushil Rohra</p>
+        </div>
+      </div>
+      <!-- Static Slide 4 -->
+      <div class="carousel-slide">
+        <div class="background-image" style="background-image: url('../../../assets/images/quote4.jpg');"></div>
+        <div class="overlay"></div>
+        <div class="quote-content">
+          <p class="quote-text">Mental health is not a destination, but a process. It’s about how you drive, not where you’re going.</p>
+          <p class="quote-author">- Sanjana Bhatia</p>
+        </div>
+      </div>
+      <!-- Navigation Buttons -->
+      <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+      <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </section>
+  
+  <!-- Why Mental Health is Important Section -->
+  <section id="mental-health" class="mental-health">
+    <div class="mental-health-container">
+      <!-- Left Side: Image and Text -->
+      <div class="mental-health-item" [ngClass]="{ visible: isItem2Visible }">
+        <!-- <div class="mental-health-image">
+          <img src="../../../assets/images/mental-health1.jpg" alt="Mental Health Importance" />
+        </div> -->
+        <div class="mental-health-content">
+          <h3 class="mental-health-title">Emotional Well-being</h3>
+          <p class="mental-health-description">
+            Good mental health allows us to enjoy life and cope with challenges effectively.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Right Side: Text and Image -->
+      <div class="mental-health-item" [ngClass]="{ 'visible': isItem2Visible }">
+        <div class="mental-health-content">
+          <h3 class="mental-health-title">Physical Health</h3>
+          <p class="mental-health-description">
+            Mental and physical health are interconnected. Poor mental health can lead to physical issues.
+          </p>
+        </div>
+        <!-- <div class="mental-health-image">
+          <img src="../../../assets/images/mental-health2.jpg" alt="Mental Health Importance" />
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- Books Section -->
+  <section id="books" class="books">
+    <h2 class="section-title-even">Books</h2>
+    <div class="books-container">
+      <!-- Book Card 1 -->
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../../../assets/images/harry.jpg" alt="Harry Potter" />
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">Harry Potter</h3>
+          <p class="book-description">
+            Discover a world of inspiration and adventure with our handpicked collection of books. From magical journeys to life-changing stories, these reads are designed to uplift your mind and spark your imagination.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Book Card 2 -->
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../../../assets/images/atomic.jpg" alt="Atomic Habits" />
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">Atomic Habits</h3>
+          <p class="book-description">
+            Transform your life one small habit at a time with Atomic Habits by James Clear. This practical guide reveals how tiny changes can lead to remarkable results. Learn how to build good habits, break bad ones, and design a life of continuous improvement and mental clarity.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Book Card 3 -->
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../../../assets/images/happy.jpg" alt="The Happiness Project" />
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">The Happiness Project</h3>
+          <p class="book-description">
+            Join Gretchen Rubin on her year-long journey to find happiness in The Happiness Project. This engaging book offers practical tips and insights on how to cultivate joy and improve your mental wellbeing in everyday life.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Book Card 4 -->
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../../../assets/images/gifts.jpg" alt="The Gifts of Imperfection" />
+        </div>
+        <div class="book-content">
+          <h3 class="book-title">The Gifts of Imperfection</h3>
+          <p class="book-description">
+            Embrace your imperfections and live a wholehearted life with The Gifts of Imperfection by Brené Brown. This empowering book offers ten guideposts for cultivating courage, compassion, and connection in your daily life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2 class="section-title-odd">Our Services</h2>
+    <div class="services-container">
+      <!-- Service Card 1 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fa-solid fa-phone-volume"></i> <!-- Font Awesome icon for registration -->
+        </div>
+        <h3 class="service-title">24/7 videocall with Therapist</h3>
+        <p class="service-description">
+          Smooth video consultancy service anytime, anywhere with the best therapists in the world
+        </p>
+      </div>
+  
+      <!-- Service Card 2 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fa-solid fa-language"></i> <!-- Font Awesome icon for listings -->
+        </div>
+        <h3 class="service-title">Milti-Lingual Support</h3>
+        <p class="service-description">
+          Want to communicate in your own language? We've got you covered with this multi-lingual feature.
+        </p>
+      </div>
+  
+      <!-- Service Card 3 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fa-solid fa-spray-can"></i> <!-- Font Awesome icon for search -->
+        </div>
+        <h3 class="service-title">Art Therapy</h3>
+        <p class="service-description">
+          Ignite your inner Picasso to reveal what your mental state says. 
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title-even">What Our Users Say</h2>
+    <div class="testimonials-container">
+      <!-- Testimonial Card 1 -->
+      <div class="testimonial-card active">
+        <div class="testimonial-content">
+          <p class="testimonial-text">This service changed my life! I feel more supported and understood.</p>
+          <p class="testimonial-author">- Jane Doe</p>
+        </div>
+      </div>
+      <!-- Testimonial Card 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p class="testimonial-text">The therapists are amazing and always available when I need them.</p>
+          <p class="testimonial-author">- John Smith</p>
+        </div>
+      </div>
+      <!-- Testimonial Card 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p class="testimonial-text">I love the multi-lingual support. It makes communication so easy.</p>
+          <p class="testimonial-author">- Maria Garcia</p>
+        </div>
+      </div>
+      <!-- Testimonial Card 4 -->
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p class="testimonial-text">The art therapy sessions helped me express myself in ways I never thought possible.</p>
+          <p class="testimonial-author">- David Brown</p>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation Dots -->
+    <div class="testimonial-dots">
+      <span class="dot active" onclick="goToTestimonial(0)"></span>
+      <span class="dot" onclick="goToTestimonial(1)"></span>
+      <span class="dot" onclick="goToTestimonial(2)"></span>
+      <span class="dot" onclick="goToTestimonial(3)"></span>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2 class="section-title-odd">Got Questions? We Have Answers!</h2>
+    <div class="faq-container">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item" (click)="toggleFAQ(1)">
+        <div class="faq-question">
+          <h3>How do I book a service?</h3>
+          <span class="faq-toggle">{{ activeFAQ === 1 ? '-' : '+' }}</span>
+        </div>
+        <div class="faq-answer" [class.active]="activeFAQ === 1">
+          <p>
+            Booking a service is as easy as selecting your desired category, choosing a provider, and picking a convenient time slot. It’s that simple!
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 2 -->
+      <div class="faq-item" (click)="toggleFAQ(2)">
+        <div class="faq-question">
+          <h3>Can I track my service provider?</h3>
+          <span class="faq-toggle">{{ activeFAQ === 2 ? '-' : '+' }}</span>
+        </div>
+        <div class="faq-answer" [class.active]="activeFAQ === 2">
+          <p>
+            Absolutely! Our real-time tracking feature allows you to see exactly where your service provider is and their estimated time of arrival. No more waiting in the dark!
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 3 -->
+      <div class="faq-item" (click)="toggleFAQ(3)">
+        <div class="faq-question">
+          <h3>What payment options are available?</h3>
+          <span class="faq-toggle">{{ activeFAQ === 3 ? '-' : '+' }}</span>
+        </div>
+        <div class="faq-answer" [class.active]="activeFAQ === 3">
+          <p>
+            We offer secure in-app payment integration for a hassle-free transaction experience. Pay with ease and focus on enjoying your freshly serviced home!
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 4 -->
+      <div class="faq-item" (click)="toggleFAQ(4)">
+        <div class="faq-question">
+          <h3>How can I leave a review?</h3>
+          <span class="faq-toggle">{{ activeFAQ === 4 ? '-' : '+' }}</span>
+        </div>
+        <div class="faq-answer" [class.active]="activeFAQ === 4">
+          <p>
+            After your service is completed, you can rate and leave a review for your service provider. Your feedback helps us maintain the highest quality standard!
+          </p>
+        </div>
+      </div>
+  
+      <!-- FAQ Item 5 -->
+      <div class="faq-item" (click)="toggleFAQ(5)">
+        <div class="faq-question">
+          <h3>Need help with a complaint?</h3>
+          <span class="faq-toggle">{{ activeFAQ === 5 ? '-' : '+' }}</span>
+        </div>
+        <div class="faq-answer" [class.active]="activeFAQ === 5">
+          <p>
+            Our dedicated customer support team is here to assist you with any issues or complaints. We’re committed to ensuring your satisfaction every step of the way!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
