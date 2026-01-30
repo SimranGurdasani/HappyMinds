@@ -1,5 +1,11 @@
 # HappyMinds 🌟  
 **AI-Powered Rural Mental Healthcare Platform**  
+### 🚀 Submission for Google Lakecity Hackathon 2026
+**Track:** AI Healthcare
+
+**Google Tech Stack:**
+* **Angular & Angular Material:** Responsive UI and mood-adaptive components.
+* **TensorFlow.js (face-api.js):** Browser-based AI for real-time emotion detection.
 *Built with Angular · Spring Boot · MySQL*
 
 > _"In the heart of rural India, every mind deserves the light of hope."_
